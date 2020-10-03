@@ -2,10 +2,11 @@ import React, { ReactNode } from "react";
 
 import styled, { css } from "styled-components";
 import commonStyle from "../styles/commonStyle";
+
 import More from "./More";
 
 const Container = styled.section<{ styleName: string }>`
-  ${commonStyle.section}
+  padding: 0 0 4rem 0;
 
   ${({ styleName }) => {
     if (styleName === "home") {
@@ -52,9 +53,13 @@ const Title = styled.h2`
 const Content = styled.div`
   ${commonStyle.grid};
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 896px) {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

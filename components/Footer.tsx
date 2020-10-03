@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+
 import styled from "styled-components";
 import commonStyle from "../styles/commonStyle";
 
 const FooterContainer = styled.footer`
-  ${commonStyle.section}
+  padding: 2rem 0;
 
   background-color: ${({ theme }) => theme.colors.dark};
 `;
@@ -52,7 +53,10 @@ function Footer() {
       <Container>
         <div className="footer__data">
           <Title>We Developer</Title>
-          <p className="footer__text">개발자를 위한 자료 공유 사이트</p>
+          <p className="footer__text">
+            개발자를 위한 정보 공유 사이트
+            <br /> 문의 : sk97.kang@gmail.com
+          </p>
         </div>
 
         <div className="footer__data">

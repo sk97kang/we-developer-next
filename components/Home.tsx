@@ -1,8 +1,9 @@
 import React from "react";
-import Section from "./Section";
 
 import styled from "styled-components";
 import commonStyle from "../styles/commonStyle";
+
+import Section from "./Section";
 
 const Container = styled.div`
   ${commonStyle.grid}

@@ -28,6 +28,12 @@ declare module "styled-components" {
       mb3: string;
       mb4: string;
     };
+    paddings: {
+      pd1: string;
+      pd2: string;
+      pd3: string;
+      pd4: string;
+    };
     zFixed: number;
     font: string;
   }
@@ -64,12 +70,20 @@ const margins = {
   mb4: "2rem",
 };
 
+const paddings = {
+  pd1: "0.5rem",
+  pd2: "1rem",
+  pd3: "1.5rem",
+  pd4: "2rem",
+};
+
 const theme: DefaultTheme = {
   colors,
   fontSizes,
   fontWeights,
   heights,
   margins,
+  paddings,
   zFixed: 100,
   font: "Montserrat",
 };
@@ -85,6 +99,7 @@ const responsiveTheme: DefaultTheme = {
   fontWeights,
   heights,
   margins,
+  paddings,
   zFixed: 100,
   font: "Montserrat",
 };

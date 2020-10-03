@@ -1,5 +1,7 @@
-import { bootCampList, lectureList } from "../common/data";
-import Card from "../components/Card";
+import { GetStaticProps } from "next";
+import { lectureList } from "../common/data";
+
+import CardDetail from "../components/CardDetail";
 import Layout from "../components/Layout";
 import Section from "../components/Section";
 
@@ -7,25 +9,23 @@ function LecturePage() {
   return (
     <Layout>
       <Section id="lecture" title="Lecture">
-        {lectureList.map((lecture) => (
-          <Card
-            key={lecture.id}
-            img={lecture.img}
-            link={lecture.link}
-            title={lecture.title}
-          />
-        ))}
-        {bootCampList.map((bootCamp) => (
-          <Card
-            key={bootCamp.id}
-            img={bootCamp.img}
-            link={bootCamp.link}
-            title={bootCamp.title}
+        {lectureList.map((item) => (
+          <CardDetail
+            key={item.id}
+            title={item.title}
+            url={item.url}
+            image={item.image}
+            site_name={item.site_name}
+            description={item.description}
           />
         ))}
       </Section>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return { props: {} };
+};
 
 export default LecturePage;

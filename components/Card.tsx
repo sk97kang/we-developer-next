@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled, { css } from "styled-components";
 
@@ -27,6 +27,10 @@ const Logo = styled.div<{ hover: boolean }>`
   }}
 `;
 
+const Image = styled.img`
+  height: 150px;
+`;
+
 const Link = styled.a`
   position: absolute;
   bottom: -100%;
@@ -48,18 +52,26 @@ const Link = styled.a`
 const LinkTtile = styled.div``;
 
 type Props = {
-  img: string;
-  link: string;
   title: string;
+  url: string;
+  image: string;
+  site_name: string;
+  description: string;
 };
 
-function Card({ img, link, title }: Props) {
-  if (img) {
+function Card({ title, url, image }: Props) {
+  const [imageSrc, setImageSrc] = useState(image);
+
+  const onError = () => {
+    setImageSrc("");
+  };
+
+  if (imageSrc) {
     return (
       <Container>
         <Logo hover={false}>
-          <img src={img} alt="img" />
-          <Link href={link} target="_blank">
+          <Image src={imageSrc} alt="img" onError={onError} />
+          <Link href={url} target="_blank">
             <LinkTtile>{title}</LinkTtile>
           </Link>
         </Logo>
@@ -69,8 +81,8 @@ function Card({ img, link, title }: Props) {
     return (
       <Container>
         <Logo hover={true}>
-          <img src="./images/default.jpg" alt="img" />
-          <Link href={link} target="_blank">
+          <Image src="./images/default.jpg" alt="img" />
+          <Link href={url} target="_blank">
             <LinkTtile>{title}</LinkTtile>
           </Link>
         </Logo>
