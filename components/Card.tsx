@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 
 import styled, { css } from "styled-components";
 
@@ -62,7 +62,7 @@ type Props = {
 function Card({ title, url, image }: Props) {
   const [imageSrc, setImageSrc] = useState(image);
 
-  const onError = (e: SyntheticEvent<HTMLImageElement, Event>) => {
+  const onError = () => {
     setImageSrc("");
   };
 
