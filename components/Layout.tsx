@@ -17,16 +17,20 @@ function Layout({ children, title = "We Developer" }: Props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         {/* favicon */}
         <link
-          href="./favicon/favicon.png"
+          href="./favicon/favicon.ico"
           rel="shortcut icon"
           sizes="16x16 32x32 64x64"
         />
         {/* meta */}
         <meta name="description" content="개발자를 위한 정보 공유 사이트" />
         <meta property="og:title" content="위디" />
+        <meta
+          property="og:description"
+          content="개발자를 위한 정보 공유 사이트"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wed.netlify.app/" />
-        <meta property="og:image" content="favicon.png" />
+        <meta property="og:url" content="https://wedeveloper.netlify.app/" />
+        <meta property="og:image" content="./favicon/favicon.png" />
         <meta property="og:site_name" content="위디" />
         {/* <!-- ===== BOX ICONS ===== --> */}
         <link

@@ -34,7 +34,7 @@ export const lectureList: dataType[] = [
     id: 2,
     title: "코딩 부트캠프 | 바닐라코딩",
     url: "https://www.vanillacoding.co/",
-    image: "/images/vanilla_coding_bg.png",
+    image: "",
     site_name: "바닐라코딩",
     description:
       "대한민국 최고라 자부하는 바닐라코딩은 엄선된 소수 인원을 대상으로 소프트웨어 개발자가 될 수 있도록 커리어 전향을 도와드리는 코딩 부트캠프입니다.",
@@ -132,7 +132,7 @@ export const lectureList: dataType[] = [
     id: 13,
     title: "코딩이 처음이라면, 코드잇",
     url: "https://www.codeit.kr/",
-    image: "/static/images/brand/og_tag.png",
+    image: "",
     site_name: "코딩이 처음이라면, 코드잇",
     description:
       "월 3만원대로 Python, JavaScript, HTML/CSS, Java 등 1,600개 이상 프로그래밍 강의를 무제한 수강하세요",
@@ -154,7 +154,7 @@ export const blogList: dataType[] = [
     id: 0,
     title: "리디북스",
     url: "https://www.ridicorp.com/blog/",
-    image: "https://www.ridicorp.com/assets/img/fb-img-ridicorp.png",
+    image: "",
     site_name: "Blog",
     description: "",
   },

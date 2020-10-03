@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 
 import styled, { css } from "styled-components";
 
@@ -62,33 +62,24 @@ type Props = {
 function Card({ title, url, image }: Props) {
   const [imageSrc, setImageSrc] = useState(image);
 
-  const onError = () => {
+  const onError = (e: SyntheticEvent<HTMLImageElement, Event>) => {
     setImageSrc("");
   };
 
-  if (imageSrc) {
-    return (
-      <Container>
-        <Logo hover={false}>
-          <Image src={imageSrc} alt="img" onError={onError} />
-          <Link href={url} target="_blank">
-            <LinkTtile>{title}</LinkTtile>
-          </Link>
-        </Logo>
-      </Container>
-    );
-  } else {
-    return (
-      <Container>
-        <Logo hover={true}>
-          <Image src="./images/default.jpg" alt="img" />
-          <Link href={url} target="_blank">
-            <LinkTtile>{title}</LinkTtile>
-          </Link>
-        </Logo>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <Logo hover={!imageSrc}>
+        <Image
+          src={imageSrc ? imageSrc : "./images/default.jpg"}
+          alt="img"
+          onError={onError}
+        />
+        <Link href={url} target="_blank">
+          <LinkTtile>{title}</LinkTtile>
+        </Link>
+      </Logo>
+    </Container>
+  );
 }
 
 export default Card;
