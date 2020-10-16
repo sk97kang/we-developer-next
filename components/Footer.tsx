@@ -51,15 +51,15 @@ function Footer() {
   return (
     <FooterContainer>
       <Container>
-        <div className="footer__data">
+        <div>
           <Title>We Developer</Title>
-          <p className="footer__text">
+          <p>
             개발자를 위한 정보 공유 사이트
             <br /> 문의 : sk97.kang@gmail.com
           </p>
         </div>
 
-        <div className="footer__data">
+        <div>
           <Title>EXPLORE</Title>
           <ul>
             <Item>
@@ -90,7 +90,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="footer__data">
+        <div>
           <Title>FOLLOW</Title>
           <Social href="https://github.com/sk97kang" target="_blank">
             <i className="bx bxl-github"></i>

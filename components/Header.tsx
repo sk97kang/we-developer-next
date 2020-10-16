@@ -14,7 +14,7 @@ const Container = styled.header`
 `;
 
 const Nav = styled.nav`
-  ${commonStyle.grid}
+  ${commonStyle.grid};
 
   height: ${({ theme }) => theme.heights.header};
   display: flex;

@@ -4,6 +4,7 @@ import {
   blogList,
   communityList,
   youtubeList,
+  dataType,
 } from "../common/data";
 
 import Home from "../components/Home";
@@ -12,13 +13,14 @@ import Section from "../components/Section";
 import Card from "../components/Card";
 
 const IndexPage = () => {
-  const shortLectureList =
-    lectureList.length > 8 ? lectureList.slice(0, 8) : lectureList;
-  const shortBlogList = blogList.length > 8 ? blogList.slice(0, 8) : blogList;
-  const shortCommunityList =
-    communityList.length > 8 ? communityList.slice(0, 8) : communityList;
-  const shortYoutubeList =
-    youtubeList.length > 8 ? youtubeList.slice(0, 8) : youtubeList;
+  const getShortList = (list: dataType[]) => {
+    return list.length > 8 ? list.slice(0, 8) : list;
+  };
+
+  const shortLectureList = getShortList(lectureList);
+  const shortBlogList = getShortList(blogList);
+  const shortCommunityList = getShortList(communityList);
+  const shortYoutubeList = getShortList(youtubeList);
 
   return (
     <Layout>

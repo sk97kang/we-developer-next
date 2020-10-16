@@ -27,7 +27,7 @@ function Home() {
     <Section id="home">
       <Container>
         <Title>
-          Hellow! <span>We Developer</span>
+          Hello! <span>We Developer</span>
         </Title>
       </Container>
     </Section>
